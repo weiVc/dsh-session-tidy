@@ -33,10 +33,10 @@ DeepSeek Harness 的轻量会话管理插件：**删除会话**，或**只删除
 ## 安装
 
 ```sh
-dsh plugin --profile desktop add dsh-session-tidy
+dsh plugin --profile desktop add github:weiVc/dsh-session-tidy
 ```
 
-也可以在 Harness 的「插件 → 添加插件」里直接输入包名安装。安装后通常无需重启即可在页面生效（若宿主提示 `restart-required`，重启 DSH）。
+也可以在 Harness 的「插件 → 添加插件」里粘贴上面的 github: 地址。安装后通常无需重启即可在页面生效（若宿主提示 `restart-required`，重启 DSH）。
 
 开发调试可用本地目录：
 
