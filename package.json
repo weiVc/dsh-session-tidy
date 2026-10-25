@@ -1,0 +1,65 @@
+{
+  "name": "dsh-session-tidy",
+  "version": "1.0.0",
+  "description": "Delete DSH sessions, or a single turn inside a session — always behind a confirmation. 会话整理：删除会话或单轮对话。",
+  "type": "module",
+  "main": "./index.js",
+  "license": "MIT",
+  "author": "大肥鲸",
+  "icon": "./icon.svg",
+  "engines": {
+    "node": ">=22.15.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "host/delete-session.js",
+    "host/log.js",
+    "host/log.test.mjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-primitives",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "session",
+    "sessions",
+    "session-manager",
+    "delete",
+    "delete-session",
+    "delete-turn",
+    "conversation",
+    "cleanup",
+    "会话管理",
+    "删除会话",
+    "删除对话"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
